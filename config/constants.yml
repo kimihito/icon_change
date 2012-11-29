@@ -1,0 +1,15 @@
+defaults: &defaults
+  twitter:
+#    consumer_key : "TheVVFXLGLboBRM07vzxtQ" 
+#    consumer_secret : "cs0gBLoJ33ODmrOy7PSKn2AjCRBsge9v1mBDZ0Nq5E"
+    consumer_key    : <%= ENV["TWITTER_CONSUMER_KEY"] %>
+    consumer_secret : <%= ENV["TWITTER_CONSUMER_SECRET"] %>
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
