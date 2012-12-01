@@ -1,8 +1,8 @@
-<h1>剛力彩芽になりたい</h1>
-
 <% if current_user %>
-  <%= link_to "@"+ current_user.screen_name,'https://twitter.com/'+current_user.screen_name %> さんは剛力彩芽になりました。
-     <% else %>
-  剛力彩芽になりたいあなたは下のボタンで認証しましょう <br>
-<%= link_to '認証して剛力彩芽になる', "/auth/twitter" %>
-       <% end %>
+  <h1>おめでとうございます！あなたはもう剛力彩芽です！</h1>
+    <%= link_to "@"+ current_user.screen_name,'https://twitter.com/'+current_user.screen_name %> さんは剛力彩芽になりました。
+<% else %>
+  <h1>剛力彩芽になりたい</h1>
+    剛力彩芽になりたいあなたは下のボタンで認証しましょう <br>
+  <%= link_to '認証して剛力彩芽になる', "/auth/twitter" %>
+<% end %>
