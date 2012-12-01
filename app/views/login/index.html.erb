@@ -1,11 +1,8 @@
-<h1>@kimihito_ コード書いた? - Did you write code?</h1>
+<h1>剛力彩芽になりたい</h1>
 
 <% if current_user %>
-  <%= link_to "@"+ current_user.screen_name,'https://twitter.com/'+current_user.screen_name %> さんとして、
-<%= link_to '@kimihito_', 'https://twitter.com/kimihito_'%>にコード書けと言います。
-<br/>
+  <%= link_to "@"+ current_user.screen_name,'https://twitter.com/'+current_user.screen_name %> さんは剛力彩芽になりました。
      <% else %>
-  <%= link_to '@kimihito_', 'https://twitter.com/kimihito_'%>があまりにもコードを書かないので、叱咤激励してくれる人を募集します。<br>
-方法はいたって簡単。下のボタンでアカウントを登録するだけです。<br>
-<%= link_to 'アカウント登録', "/auth/twitter" %>
+  剛力彩芽になりたいあなたは下のボタンで認証しましょう <br>
+<%= link_to '認証して剛力彩芽になる', "/auth/twitter" %>
        <% end %>
