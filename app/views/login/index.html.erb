@@ -1,8 +1,23 @@
 <% if current_user %>
+<div class="hero-unit">
   <h1>おめでとうございます！あなたはもう剛力彩芽です！</h1>
     <%= link_to "@"+ current_user.screen_name,'https://twitter.com/'+current_user.screen_name %> さんは剛力彩芽になりました。
+    <%= link_to 'ログアウト', "/signout", {:class => "btn btn-danger"} %>
+</div>
+<div class="hero-unit">
+  いつでも #剛力彩芽になりたい とつぶやけばアイコンが剛力彩芽になります<br>
+ いつでも #剛力彩芽にやめたい とつぶやけばアイコンが剛力彩芽から解除されます
+</div>
 <% else %>
+  <div class="hero-unit">
   <h1>剛力彩芽になりたい</h1>
     剛力彩芽になりたいあなたは下のボタンで認証しましょう <br>
-  <%= link_to '認証して剛力彩芽になる', "/auth/twitter" %>
+    ※一度剛力彩芽になるとやめることができません。<br>
+    <%= link_to '認証して剛力彩芽になる',"/auth/twitter", {:class =>"btn btn-primary" }%>
+  </div>
+<div class="hero-unit">
+  いつでも #剛力彩芽になりたい とつぶやけばアイコンが剛力彩芽になります<br>
+ いつでも #剛力彩芽にやめたい とつぶやけばアイコンが剛力彩芽から解除されます
+</div>
 <% end %>
+
